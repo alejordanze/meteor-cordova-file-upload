@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[hide] {
+  display: none;
+}
+
+img {
+  width: 100%;
+  image-orientation: -90deg;
+}
+
+.padding {
+  padding: 16px;
+}
+
+.picker {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cdcdcd;
+  background: #efefef;
+  text-align: center;
+}

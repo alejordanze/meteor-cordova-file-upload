@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <title>meteor-cordova-file-upload</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+  <div class="padding">
+    {{#if currentUser}}
+      {{> picker}}
+      <br />
+      {{> fileList}}
+    {{else}}
+      {{> login}}
+    {{/if}}
+  </div>
+</body>
+
+<template name="picker">
+  <button id="removeAllFiles" class="picker" style="margin-bottom: 12px;">remove all files</button>
+
+  <label class="picker">
+    <input type="file" hide>
+    <span>pick your files</span>
+  </label>
+</template>
+
+<template name="fileList">
+  {{#each files}}
+    <p>
+      <img src="{{mobileRootUrl}}gridfs/files/{{md5}}" alt="">
+    </p>
+  {{/each}}
+</template>
+
+<template name="login">
+  <form>
+    <input type="text" value="demo" id="username">
+    <input type="password" value="demo" id="password">
+    <input type="submit" value="login">
+  </form>
+</template>
